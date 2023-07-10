@@ -1,12 +1,11 @@
-import Link from "next/link"
-import React from "react"
+import ContactForm from '@/components/ContactForm/ContactForm'
 
-const Contact = () => {
+type Props = {}
+
+const Contact = (props: Props) => {
   return (
     <div>
-        <h1>Contact</h1>
-        <Link href='/'>Home!</Link>
-        <Link href='/blog/sdfas'>Post!</Link>
+      <ContactForm />
     </div>
   )
 }
