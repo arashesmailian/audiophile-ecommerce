@@ -1,10 +1,18 @@
 import {getAllPosts} from '@/lib/cms'
 import Link from 'next/link'
 
-type Props = {}
+type Props = {
+  posts: {title: string; slug: string}[]
+}
+
+export async function getStaticProps() {
+  const posts = await getAllPosts()
+  return {props: {posts}}
+}
 
 const Blog = async (props: Props) => {
-  const posts = await getAllPosts()
+  console.log(props)
+  const posts = props.posts
 
   return (
     <div>

@@ -1,12 +1,8 @@
 'use client'
 import {FormEvent, useState} from 'react'
-import {getCategories} from '@/lib/cms'
 
-type Props = {}
-
-const ContactForm = (props: Props) => {
+const ContactForm = () => {
   const [email, setEmail] = useState<string>('')
-  const cat = getCategories()
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     await fetch('/api/contact', {
@@ -18,8 +14,7 @@ const ContactForm = (props: Props) => {
       },
     })
     setEmail('')
-    console.log('hi')
-    console.log(cat)
+    // console.log('hi')
   }
   return (
     <form onSubmit={handleSubmit}>

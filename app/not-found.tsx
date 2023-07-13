@@ -4,7 +4,7 @@ import {useRouter} from 'next/navigation'
 import {styled} from 'styled-components'
 import Head from 'next/head'
 import Link from 'next/link'
-import {QUERIES} from '@/lib/mediaQueries'
+import {QUERIES} from '@/constants/mediaQueries'
 
 const Container = styled.section`
   max-width: 100%;
@@ -26,7 +26,6 @@ const Header = styled.h1`
   color: var(--color-pry-100);
   font-size: 5rem;
   line-height: 5rem;
-
   @media ${QUERIES.mobileMini} {
     font-size: 9rem;
     line-height: 9rem;

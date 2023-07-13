@@ -1,5 +1,3 @@
-import { IProduct } from '@/types/mainData'
-import data from '../data.json'
 
 const delay = (time:number)=>{
     return new Promise((resolve)=>{
@@ -18,13 +16,4 @@ export const getAllPosts =async () =>{
             body:'blaaaahh',
         }
     })
-}
-
-export const getCategories = ()=>{
-    const categories:string[] = []
-     data.map((product:IProduct)=>{
-        if(!categories.includes(product.category))
-            categories.push(product.category)
-    })
-    return categories
 }
