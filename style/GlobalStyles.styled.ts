@@ -4,7 +4,7 @@ import { QUERIES } from '@/constants/mediaQueries'
 export const GlobalStyles = createGlobalStyle`
     :root{
         // COLORS
-        --color-pry-100: #d97e4a;
+        /* --color-pry-100: #d97e4a;
         --color-pry-200: #0F0F0F;
         --color-pry-300: #F2F2F2;
         --color-pry-400: hsl(0, 0%, 98%);
@@ -32,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
         --border-radius: 0.5rem;
 
         //ANIMATION 
-        --transition: all 0.5s;
+        --transition: all 0.5s; */
     }
     
     // DEFAULT STYLE RESETS //

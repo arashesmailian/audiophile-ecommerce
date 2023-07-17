@@ -1,11 +1,7 @@
-import {JsxElement} from 'typescript'
 import MobileMenuItemCard from '../MobileMenuItemCard'
-import {
-  MobileMenuButton,
-  MobileMenuItemContainer,
-  MobileNav,
-} from './index.styled'
 import Image from 'next/image'
+
+import styles from './index.module.scss'
 
 interface menuDataType {
   title: string
@@ -34,16 +30,19 @@ const MobileHamburgerMenu = ({
   changeStatus,
 }: Props) => {
   return (
-    <MobileNav>
-      <MobileMenuButton onClick={() => changeStatus(!status)}>
+    <nav className={styles.mobile_nav}>
+      <button
+        className={styles.mobile_menu__button}
+        onClick={() => changeStatus(!status)}
+      >
         {!status ? (
           <Image src={hamburgerIcon} alt={alt} />
         ) : (
           <Image src={closeIcon} alt={alt} />
         )}
-      </MobileMenuButton>
+      </button>
       {status && (
-        <MobileMenuItemContainer>
+        <div className={styles.mobile_menu_item__container}>
           {menuData.slice(1, 4).map((menuItem, index) => (
             <MobileMenuItemCard
               cardData={menuItem}
@@ -51,9 +50,9 @@ const MobileHamburgerMenu = ({
               onClick={changeStatus}
             />
           ))}
-        </MobileMenuItemContainer>
+        </div>
       )}
-    </MobileNav>
+    </nav>
   )
 }
 

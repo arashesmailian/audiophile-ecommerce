@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import {SocialItemsContainer, SocialWrapper} from './index.styled'
 import Image from 'next/image'
+
+import styles from './index.module.scss'
 
 interface Props {
   socialsData: {
@@ -12,8 +13,8 @@ interface Props {
 
 const FooterSocial = ({socialsData}: Props) => {
   return (
-    <SocialWrapper>
-      <SocialItemsContainer>
+    <div className={styles.social_wrapper}>
+      <ul className={styles.social_items__container}>
         {socialsData.map((item, index) => (
           <li key={index}>
             <Link href={item.link} aria-label={item.label}>
@@ -21,8 +22,8 @@ const FooterSocial = ({socialsData}: Props) => {
             </Link>
           </li>
         ))}
-      </SocialItemsContainer>
-    </SocialWrapper>
+      </ul>
+    </div>
   )
 }
 

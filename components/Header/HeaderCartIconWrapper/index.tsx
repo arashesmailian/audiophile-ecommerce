@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import {CartButton, CartNumber, CartWrapper} from './index.styled'
+
+import styles from './index.module.scss'
 
 type Props = {
   data: {icon: any; alt: string}
@@ -9,17 +10,17 @@ const CartIcon = ({data: {icon, alt}}: Props) => {
   let totalProduct = 1
 
   return (
-    <CartWrapper>
-      <CartButton>
+    <div className={styles.cart_wrapper}>
+      <button className={styles.cart_button}>
         <Image src={icon} alt={alt} />
         {totalProduct && (
-          <CartNumber>
+          <div className={styles.cart_number}>
             <p>{totalProduct}</p>
-          </CartNumber>
+          </div>
         )}
-      </CartButton>
+      </button>
       {/* cart menu */}
-    </CartWrapper>
+    </div>
   )
 }
 

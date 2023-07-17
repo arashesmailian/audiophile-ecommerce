@@ -1,6 +1,7 @@
 import HeaderMenuItemLink from '@/components/Header/HeaderMenuItemLink'
-import {FooterMenuWrapper} from './index.styled'
 import {StaticImageData} from 'next/image'
+
+import styles from './index.module.scss'
 
 interface Props {
   menuData: {
@@ -15,13 +16,13 @@ interface Props {
 
 const FooterMenu = ({menuData}: Props) => {
   return (
-    <FooterMenuWrapper>
+    <ul className={styles.footer_menu_wrapper}>
       {menuData.map((item, index) => (
         <li key={index}>
           <HeaderMenuItemLink href={item.link}>{item.title}</HeaderMenuItemLink>
         </li>
       ))}
-    </FooterMenuWrapper>
+    </ul>
   )
 }
 

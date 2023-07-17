@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import {HomeMain} from './page.styled'
+import styles from 'style/home-page/page.module.scss'
 
 export default async function Home() {
   return (
     <>
-      <HomeMain>
+      <main className={styles.home_main}>
         <div>
           <h1>Hi! Welcome.</h1>
         </div>
@@ -15,7 +15,7 @@ export default async function Home() {
         <div>
           <Link href='/contact'>Contact</Link>
         </div>
-      </HomeMain>
+      </main>
     </>
   )
 }

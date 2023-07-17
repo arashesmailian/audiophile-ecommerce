@@ -1,13 +1,11 @@
-import { QUERIES } from "@/constants/mediaQueries"
-import { styled } from "styled-components"
-
-export const MobileNav = styled.nav`
-    display:none;
+.mobile_nav{
+    display:none !important;
     @media screen and (max-width:786px) {
-        display:flex;
+        display:flex !important;
     }
-`
-export const MobileMenuButton = styled.button`
+}
+
+.mobile_menu__button{
     border:none;
     background-color:transparent;
     cursor:pointer;
@@ -15,10 +13,11 @@ export const MobileMenuButton = styled.button`
         width:1.2rem;
         height:auto;
     }
-`
-export const MobileMenuItemContainer = styled.div`
+}
+
+.mobile_menu_item__container{
     position:absolute;
-    background-color:var(--color-sec-200);
+    background-color: $color-sec-200;
     width:100%;
     min-height:100%;
     top:0;
@@ -32,8 +31,8 @@ export const MobileMenuItemContainer = styled.div`
     gap:1rem;
 
     & > * {
-      flex:1;
-      margin: 4.25rem auto 0rem auto;
+    //   flex:1;
+      margin: 1rem auto 0rem auto;
     }
     @media screen and (min-width: 650px){
         display:flex;
@@ -41,4 +40,4 @@ export const MobileMenuItemContainer = styled.div`
         justify-content:space-between;
         min-height:10rem;
     }
-`
+}

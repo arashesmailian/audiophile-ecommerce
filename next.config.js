@@ -5,7 +5,8 @@ const nextConfig = {
     appDir: true,
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, 'style')],
+    prependData: '@import "style/variables.scss";',
   },
   compiler: {
     styledComponents: true,

@@ -1,0 +1,40 @@
+.cart_wrapper{
+    justify-content: center;
+
+    img{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width:786px) {
+        justify-content: flex-start;
+    }
+}
+
+.cart_button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.cart_number{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: $color-pry-100;
+    color: $color-sec-200;
+    position: absolute;
+    border: none;
+    border-radius: 100%;
+    margin: -2rem 0rem 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    p{
+        font-size: 0.6rem;
+        line-height: 0;
+        font-weight: $font-pry-100;
+        list-style: 0;
+    }
+}

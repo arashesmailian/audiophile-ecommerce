@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import {SocialMobileContainer} from './index.styled'
 import Image from 'next/image'
 
+import styles from './index.module.scss'
 interface Props {
   socialsData: {
     icon: any
@@ -12,7 +12,7 @@ interface Props {
 
 const FooterSocialMobile = ({socialsData}: Props) => {
   return (
-    <SocialMobileContainer>
+    <ul className={styles.social_mobile__container}>
       {socialsData.map((item, index) => (
         <li key={index}>
           <Link href={item.link}>
@@ -20,7 +20,7 @@ const FooterSocialMobile = ({socialsData}: Props) => {
           </Link>
         </li>
       ))}
-    </SocialMobileContainer>
+    </ul>
   )
 }
 

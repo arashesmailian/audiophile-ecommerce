@@ -1,0 +1,10 @@
+.social_mobile__container{
+    display: flex;
+    justify-content: space-between !important;
+    width: 6.5625rem;
+    min-height: 4.5rem;
+
+    @media screen and (min-width:$tablet) {
+        display: none !important;
+    }
+}

@@ -1,0 +1,128 @@
+.footer_container{
+    min-width: 100%;
+    background-color: $color-sec-300;
+    padding: 0 1rem;
+
+    @media screen and (min-width:$tablet-mini) {
+        padding: 0 2rem;
+    }
+}
+
+.wrapper{
+    max-width: $max-container;
+    min-height: 40.875rem;
+    margin: $center-container;
+
+    @media screen and (min-width:$tablet-mini) {
+        min-height: 25rem;
+    }
+    @media screen and (min-width:$tablet) {
+        min-height: 22.8125rem;
+    }
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width:$tablet-mini) {
+            align-items: flex-start;
+        }
+    }
+}
+
+.top_border__wrapper{
+    @media screen and (min-width:$tablet-mini) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.top_border{
+    height: 0.25rem;
+    width: 6.3125rem;
+    background-color: $color-pry-100;
+}
+
+.footer_top__content{
+    @media screen and (min-width:$tablet) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    & > * {
+        display: flex;
+        align-items: center;
+    }
+}
+.logo_wrapper{
+    min-height: 6.25rem;
+
+    @media screen and (min-width:$tablet-mini) {
+        min-height: 5.75rem;
+        align-items: flex-end;
+    }
+}
+.footer_mid__content{
+    @media screen and (min-width:$tablet) {
+        flex-direction: row;
+        align-items: flex-end;
+
+        &>*{
+            flex: 1;
+        }
+    }
+}
+
+.info_wrapper{
+    display: flex;
+    align-items: center;
+    min-height: 12.5rem;
+
+    @media screen and (min-width:$tablet-mini) {
+        min-height: 6.25rem;
+    }
+    @media screen and (min-width:$tablet) {
+        min-height: 8.25rem;
+        align-items: flex-end;
+    }
+}
+.info{
+    text-align: center;
+    color: $color-sec-500;
+
+    @media screen and (min-width:$tablet-mini) {
+        text-align: left;
+    }
+}
+
+.footer_bottom__content{
+    @media screen and (min-width:$tablet-mini) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: 5.625rem;
+    }
+
+    &>*{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width:$tablet-mini) {
+            align-items: flex-end;
+        }
+    }
+}
+
+.copy_right__content{
+    font-weight: $font-weight-400;
+    min-height: 4.5rem;
+    color: $color-sec-500;
+    display: flex;
+
+    @media screen and (min-width:$tablet-mini) {
+        align-items: flex-end;
+    }
+}

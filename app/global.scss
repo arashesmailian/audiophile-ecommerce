@@ -1,0 +1,113 @@
+
+html{
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer */
+  scrollbar-color: transparent; /* For Chrome, Edge, and Safari */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+li{
+    list-style:none;
+}
+
+//! Remove all animations and transitions for people that prefer not to see them //
+@media (prefer-reduced-motion: reduce) {
+    html:focus-within{
+        scroll-behavior:auto;
+    }
+    *,*::before,*::after{
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+        scroll-behavior:auto !important;
+    }
+}
+
+::-webkit-scrollbar {
+    display:none !important;
+}
+
+///////////////////////////////////////////////////////
+// BASE STYLES //
+body{
+    font-family:'Manrope', sans-serif;
+    font-weight:$font-weight-400;
+    background-color:$color-sec-200;
+    color:$color-pry-200;
+    position:relative;
+    --ms-overflow-style: none;
+}
+
+///////////////////////////////////////////////////////
+// TYPOGRAPHY //
+a{
+    text-decoration:none;
+    color: $color-pry-300;
+    font-size:0.8125rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    &:hover {
+        transition: $transition;
+        color: $color-pry-100;
+    }
+    &:active {
+        transition: $transition;
+        color: $color-pry-100;
+    }
+}
+
+p{
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    font-weight: $font-weight-100;
+    letter-spacing: 0.05rem;
+}
+
+h1{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: $font-weight-400;
+    letter-spacing: 0.080625rem;
+
+    @media screen and (min-width:$tablet-mini) {
+        font-size: 3.5rem;
+        line-height: 3.625rem;
+    }
+
+    @media screen and (min-width:$tablet) {
+        letter-spacing: 0.125rem;
+    }
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+
+    @media screen and (min-width:$mobile) {
+        font-size: 3.5rem;
+        line-height: 3.625rem;
+    }
+}
+
+h3 {
+    font-size: 0.9375rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.1rem;
+
+    @media screen and (min-width:$tablet) {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+} 

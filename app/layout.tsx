@@ -1,7 +1,7 @@
 import {manrope} from '@/style/fonts'
-import StyledComponentsRegistry from '@/lib/styledComponentsRegistry'
 import Navbar from '@/components/Header/Navbar'
 import Footer from '@/components/Footer'
+import './global.scss'
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
@@ -12,11 +12,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       */}
       <head />
       <body>
-        <StyledComponentsRegistry>
-          <Navbar />
-          {children}
-          <Footer />
-        </StyledComponentsRegistry>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   )

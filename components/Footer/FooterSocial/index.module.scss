@@ -1,0 +1,15 @@
+.social_wrapper{
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.social_items__container{
+    justify-content: space-between;
+    width: 6.5625rem;
+    display: none;
+
+    @media screen and (min-width:$tablet) {
+        display: flex;
+    }
+}

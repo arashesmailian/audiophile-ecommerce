@@ -1,3 +1,5 @@
+'use client'
+
 import {ReactNode, MouseEvent} from 'react'
 import {useRouter, usePathname} from 'next/navigation'
 
@@ -24,9 +26,7 @@ const HeaderMenuItemLink = ({href, children}: Props) => {
           textDecoration: 'none',
           margin: '0',
           padding: '0',
-          color: isCurrentPath
-            ? 'var(--color-pry-100)'
-            : 'var(--color-pry-300)',
+          color: isCurrentPath ? `#d97e4a` : '#F2F2F2',
         }}
       >
         {children}
