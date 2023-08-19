@@ -1,0 +1,47 @@
+.form_input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.875rem;
+    width: 100%;
+
+    label{
+        text-transform: capitalize;
+        font-size: 0.75rem;
+        letter-spacing: -0.013125rem;
+        margin-bottom: 0.75rem;
+    }
+    input{
+        width: 100%;
+        min-height: 3.5rem;
+        border-radius: $border-radius;
+        border: none;
+        border: 0.1rem solid hsl(0, 0%, 81%);
+        font-family: $font-pry-100;
+        padding: 0rem 1.5rem;
+        color: $color-sec-400;
+        font-weight: $font-weight-400;
+        font-size: 0.875rem;
+        text-transform: capitalize;
+        background-color: $color-sec-200;
+
+        &:focus,
+        &:hover {
+          outline: 0.1rem solid $color-pry-100;
+        }
+    }
+}
+.form_label{
+  // display: flex;
+  // justify-content: space-between;
+}
+.form_error{
+  font-size: 0.75rem;
+  letter-spacing: -0.013125rem;
+  margin-bottom: 0.75rem;
+  color: #cd2c2c;
+  text-align: right;
+
+  & > * {
+    flex: 1;
+  }    
+}

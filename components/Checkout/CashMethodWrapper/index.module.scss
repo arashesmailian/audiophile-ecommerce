@@ -1,0 +1,40 @@
+.cashOnWrapper{
+    @media screen and (min-width:$tablet-mini) {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+    
+        & > * {
+          flex: 1;
+        }
+      }
+}
+.cashOnImage{
+    flex: 1;
+    position: relative;
+    object-fit: contain;
+    min-height: 3rem;
+    margin-bottom: 1rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      margin-bottom: 0rem;
+    }
+  
+    img {
+      object-fit: contain;
+      width: 3rem;
+      height: auto;
+    }
+}
+.cashOnContent{
+    flex: 4;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    font-weight: $font-weight-100;
+    letter-spacing: 0.05rem;
+    text-align: center;
+  
+    @media screen and (min-width:$tablet-mini) {
+      text-align: left;
+    }
+}

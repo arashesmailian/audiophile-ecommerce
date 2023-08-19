@@ -17,6 +17,13 @@ img{
 li{
     list-style:none;
 }
+main{
+    padding: 0 5rem;
+    flex: 1;
+}
+.checkout_main{
+    background-color: $color-pry-500;
+}
 
 //! Remove all animations and transitions for people that prefer not to see them //
 @media (prefer-reduced-motion: reduce) {
@@ -44,6 +51,9 @@ body{
     color:$color-pry-200;
     position:relative;
     --ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 ///////////////////////////////////////////////////////

@@ -1,21 +1,19 @@
-import {manrope} from '@/style/fonts'
-import Navbar from '@/components/Header/Navbar'
-import Footer from '@/components/Footer'
-import './global.scss'
+import { manrope } from '@/style/fonts';
+import Navbar from '@/components/Header/Navbar';
+import Footer from '@/components/Footer';
+import './global.scss';
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: any }) {
+  console.log(children?.props?.childProp.segment);
+
   return (
-    <html lang='en' className={manrope.className}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={manrope.className}>
       <head />
       <body>
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }

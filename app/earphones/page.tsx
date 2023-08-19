@@ -1,7 +1,5 @@
-type Props = {}
+const Earphones = () => {
+  return <div>Earphones</div>;
+};
 
-const Earphones = (props: Props) => {
-  return <div>Earphones</div>
-}
-
-export default Earphones
+export default Earphones;

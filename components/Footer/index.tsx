@@ -1,17 +1,17 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import {getRootLayoutData} from '@/lib/data'
-import FooterMenu from './FooterMenu'
-import FooterSocial from './FooterSocial'
-import FooterSocialMobile from './FooterSocial/mobile'
+import Link from 'next/link';
+import Image from 'next/image';
+import { getRootLayoutData } from '@/lib/data';
+import FooterMenu from './FooterMenu';
+import FooterSocial from './FooterSocial';
+import FooterSocialMobile from './FooterSocial/mobile';
 
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
 const Footer = () => {
   const {
-    headerData: {logo, menu},
+    headerData: { logo, menu },
     footerData,
-  } = getRootLayoutData()
+  } = getRootLayoutData();
 
   return (
     <footer className={styles.footer_container}>
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

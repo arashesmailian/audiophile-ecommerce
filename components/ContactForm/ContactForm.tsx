@@ -1,32 +1,31 @@
-'use client'
-import {FormEvent, useState} from 'react'
+'use client';
+import { FormEvent, useState } from 'react';
 
 const ContactForm = () => {
-  const [email, setEmail] = useState<string>('')
+  const [email, setEmail] = useState<string>('');
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     await fetch('/api/contact', {
       method: 'POST',
-      body: JSON.stringify({email}),
+      body: JSON.stringify({ email }),
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
-    })
-    setEmail('')
-    // console.log('hi')
-  }
+    });
+    setEmail('');
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input
-        type='email'
+        type="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type='submit'>Submit</button>
+      <button type="submit">Submit</button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

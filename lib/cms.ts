@@ -7,13 +7,13 @@ const delay = (time:number)=>{
     })
 }
 
-export const getAllPosts =async () =>{
-    await delay(3000)    
+export const getAllPosts = async () =>{
+    await delay(5000)    
     return new Array(10).fill(1).map((_,i)=>{
-        return {
-            title:`This is post ${i}`,
+        return{
+            title:`This is post ${i} `,
             slug:`this-is-post-${i}`,
-            body:'blaaaahh',
+            body:`blaaaahh-${i}`,
         }
     })
 }

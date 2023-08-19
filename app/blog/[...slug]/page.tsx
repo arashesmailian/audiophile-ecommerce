@@ -1,9 +1,13 @@
-type Props = {}
+type Props = {
+  params: { slug: string };
+};
 
-const BlogPost = (props: Props) => {
-  // console.log(props)
+const BlogPost = ({ params }: Props) => {
+  return (
+    <div>
+      BlogPost <p>{params.slug}</p>
+    </div>
+  );
+};
 
-  return <div>BlogPost</div>
-}
-
-export default BlogPost
+export default BlogPost;

@@ -1,30 +1,24 @@
-import {getAllPosts} from '@/lib/cms'
-import Link from 'next/link'
+import { getAllPosts } from '@/lib/cms';
+import styles from './index.module.scss';
+import Link from 'next/link';
 
-type Props = {
-  posts: {title: string; slug: string}[]
-}
-
-export async function getStaticProps() {
-  const posts = await getAllPosts()
-  return {props: {posts}}
-}
-
-const Blog = async (props: Props) => {
-  console.log(props)
-  const posts = props.posts
+type blog = {
+  title: string;
+  slug: string;
+  body: string;
+};
+async function Blog() {
+  const blogs = await getAllPosts();
 
   return (
     <div>
-      {posts.map((post, index) => (
-        <Link key={index} href={`/blog/${post.slug}`}>
-          <div>
-            <h1>{post.title}</h1>
-          </div>
-        </Link>
+      {blogs.map((blog: blog) => (
+        <div className={styles.container} key={blog.title}>
+          <Link href={`/blog/${blog.slug}`}>{blog.slug}</Link>
+        </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
