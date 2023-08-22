@@ -6,7 +6,7 @@ import CheckoutSummary from '@/components/Checkout/CheckoutSummary';
 
 const Checkout = () => {
   return (
-    <div className={styles.checkout_page_main}>
+    <main className={styles.checkout_page_main}>
       <NavigateToBack />
       <section className={styles.container}>
         <div className={styles.wrapper}>
@@ -18,7 +18,7 @@ const Checkout = () => {
           </section>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

@@ -9,7 +9,9 @@ export default function RootLayout({ children }: { children: any }) {
       <head />
       <body>
         <Navbar />
-        <main>{children}</main>
+        {/* <main> */}
+        {children}
+        {/* </main> */}
         <Footer />
       </body>
     </html>

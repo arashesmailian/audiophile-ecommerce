@@ -1,0 +1,41 @@
+.container{
+    max-width: 100%;
+    min-height: 52.5625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 1rem;
+    position: relative;
+
+    @media screen and (min-width:$tablet-mini) {
+        min-height: 25rem;
+        padding: 0rem 2rem;
+      }
+    
+      @media screen and (min-width:$tablet) {
+        min-height: 34rem;
+      }
+}
+.wrapper{
+    width: $max-container;
+    margin: $center-container;
+    flex-direction: column;
+  
+    @media screen and (min-width:$tablet-mini) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 10rem;
+      gap: 1rem;
+    }
+  
+    & > * {
+      flex: 1;
+      margin: 4.25rem auto 0rem auto;
+  
+      @media screen and (min-width:$tablet) {
+        margin: 0rem auto;
+      }
+    }
+}

@@ -9,22 +9,12 @@ import PaymentInput from '../PaymentInput';
 import CashMethodWrapper from '../CashMethodWrapper';
 import styles from './index.module.scss';
 
-
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('emoney');
   const {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-
-  useEffect(() => {
-    const layoutMain = document.querySelector('main');
-    if (layoutMain) layoutMain.style.backgroundColor = 'hsl(0, 0%, 89%)';
-
-    return () => {
-      if (layoutMain) layoutMain.style.backgroundColor = '';
-    };
-  }, []); //styling background color only in '/checkout' route
 
   return (
     <form id="checkoutForm" className={styles.form}>

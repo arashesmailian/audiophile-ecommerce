@@ -1,0 +1,62 @@
+.container{
+    max-width: 100%;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+  
+    @media screen and (min-width:$mobile) {
+      padding: 1rem 2rem 1rem 2rem;
+    }
+}
+.wrapper{
+    max-width: $max-container;
+    margin: $center-container;
+    display: flex;
+    flex-direction: column;
+  
+    @media screen and (min-width:$tablet-mini) {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    @media screen and (min-width:$tablet) {
+      gap: 2rem;
+    }
+  
+    & > * {
+      flex: 1;
+    }
+}
+.image_wrapper{
+    min-height: 20rem;
+    border-radius: $border-radius;
+    background-image: url("/images/home/mobile/image-earphones-yx1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content_wrapper{
+    min-height: 20rem;
+    margin-top: 1.5rem;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    background-color: $color-pry-500;
+  
+    @media screen and (min-width:$tablet-mini) {
+      margin-top: 0rem;
+    }
+}
+.content{
+    margin: 0rem 1.5rem;
+
+    @media screen and (min-width:$tablet-mini) {
+      margin-left: 3.75rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      margin-left: 5.875rem;
+    }
+}
+.heading{
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}

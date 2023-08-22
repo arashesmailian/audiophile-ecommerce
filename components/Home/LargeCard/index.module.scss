@@ -1,0 +1,110 @@
+.container{
+    max-width: 100%;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+  
+    @media screen and (min-width:$mobile) {
+      padding: 1rem 2rem 1rem 2rem;
+    }
+}
+.wrapper{
+    min-height: 37.5rem;
+    background-color: $color-pry-100;
+    max-width: $max-container;
+    margin: $center-container;
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius;
+    background-image: url("/images/home/desktop/pattern-circles.svg");
+    background-size: 35rem auto;
+    background-repeat: no-repeat;
+    background-position: center -7rem;
+  
+    @media screen and (min-width:$mobile) {
+      min-height: 45rem;
+      background-size: contain;
+      background-position: auto -8rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      background-size: 60rem auto;
+      background-position: -13rem -1rem;
+      flex-direction: row;
+      min-height: 35rem;
+    }
+  
+    & > * {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+}
+.image{
+    ._desktop{
+        display: none;
+    }
+    @media screen and (min-width:$tablet) {
+        transform: translateY(3.55rem);
+        ._mobile{
+            display: none;
+        }
+        ._desktop{
+            display: block;
+        }
+      }
+    
+      img {
+        width: 10.765625rem;
+        height: auto;
+    
+        @media screen and (min-width:$mobile) {
+          width: 12.3125rem;
+        }
+    
+        @media screen and (min-width:$tablet) {
+          height: 28.125rem;
+          width: auto;
+        }
+      }
+}
+.content_wrapper{
+    text-align: center;
+    justify-content: flex-start;
+    color: $color-sec-200;
+  
+    @media screen and (min-width:$tablet) {
+      justify-content: center;
+      text-align: left;
+      display: flex;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    @media screen and (min-width:$tablet) {
+      align-items: flex-start;
+    }
+}
+.heading{
+    text-transform: uppercase;
+    max-width: 12rem;
+  
+    @media screen and (min-width:$mobile) {
+      max-width: 15rem;
+    }
+}
+.description{
+    margin: 1rem;
+    max-width: 21.8125rem;
+  
+    @media screen and (min-width:$mobile) {
+      margin: 2rem 1rem;
+    }
+    @media screen and (min-width:$tablet) {
+      margin: 2rem 0rem;
+    }
+}
