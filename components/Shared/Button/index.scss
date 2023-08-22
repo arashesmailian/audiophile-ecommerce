@@ -1,0 +1,38 @@
+.btn{
+    cursor: pointer;
+    background-color: $color-pry-100;
+    color: $color-sec-200;
+    min-height: 3rem;
+    width: 10rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8125rem;
+    transition: $transition;
+      &:hover {
+      transition: $transition;
+      background-color: $color-sec-100;
+      color: $color-sec-200;
+    }
+}
+.dark{
+    background-color: $color-sec-300;
+
+    &:hover {
+      background-color: $color-pry-200;
+    }
+}
+.outline{
+    background-color: transparent;
+    border: 0.1rem solid $color-sec-300;
+    color: $color-sec-300;
+
+    &:hover {
+        background-color: $color-sec-300;
+        color: $color-sec-200;
+      }
+}
+.block{
+    width: 100%;
+}

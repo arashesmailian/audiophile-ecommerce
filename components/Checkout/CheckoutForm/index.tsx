@@ -9,12 +9,10 @@ import PaymentInput from '../PaymentInput';
 import CashMethodWrapper from '../CashMethodWrapper';
 import styles from './index.module.scss';
 
-type Props = {};
 
-const CheckoutForm = (props: Props) => {
+const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('emoney');
   const {
-    register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });

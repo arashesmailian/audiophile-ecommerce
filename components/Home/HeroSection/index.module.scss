@@ -1,0 +1,118 @@
+.container{
+    max-width: 100%;
+    background-color: $color-sec-300;
+  
+    @media screen and (min-width:$tablet) {
+      padding: 0rem 2rem;
+    }
+}
+.wrapper{
+    max-width: $max-container;
+    min-height: 31.9375rem;
+    margin: $center-container;
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("/images/home/mobile/image-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto;
+  
+    @media screen and (min-width: 430px) {
+      background-position: auto;
+      background-position: 0px -8rem;
+    }
+  
+    @media screen and (min-width: 490px) {
+      background-position: auto;
+      background-position: 0px -9rem;
+    }
+  
+    @media screen and (min-width: 572px) {
+      background-position: auto;
+      background-position: 0px -15rem;
+    }
+  
+    @media screen and (min-width: 726px) {
+      background-image: url("/images/home/tablet/image-header.png");
+      background-position: 0rem;
+      min-height: 40rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      min-height: 39.5625rem;
+      padding: 0rem;
+      background-image: none;
+  
+      & > * {
+        flex: 1;
+      }
+    }
+}
+.content{
+    & > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        @media screen and (min-width:$tablet) {
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+}
+.sub_heading{
+    text-transform: uppercase;
+    letter-spacing: 0.625rem;
+    font-size: 0.875rem;
+    color: $color-pry-300;
+}
+.heading{
+    text-transform: uppercase;
+    margin: 1rem 0rem;
+    color: $color-sec-200;
+  
+    @media screen and (min-width: 726px) {
+      font-size: 3.5rem;
+      line-height: 3.625rem;
+      margin: 2rem 0rem;
+      max-width: 24.75rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      margin: 1.3125rem 0rem 2.0625rem 0rem;
+    }
+}
+.description{
+    color: $color-pry-300;
+    max-width: 25rem;
+    margin: 0rem auto 1.3rem auto;
+  
+    @media screen and (min-width: 726px) {
+      margin-bottom: 2rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      margin: 0rem 0rem 2.5rem 0rem;
+      max-width: 23rem;
+      font-size: 0.9375rem;
+    }
+}
+.empty{
+    display: none;
+
+    @media screen and (min-width:$tablet) {
+      min-height: 40rem;
+      display: flex;
+      background-image: url("/images/home/desktop/headphone-hero-image.png");
+      background-repeat: no-repeat;
+      background-position: 0rem 3rem;
+    }
+}

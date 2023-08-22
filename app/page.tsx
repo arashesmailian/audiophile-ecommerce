@@ -1,3 +1,4 @@
+import HeroSection from '@/components/Home/HeroSection';
 import Link from 'next/link';
 
 import styles from 'style/home-page/page.module.scss';
@@ -6,7 +7,7 @@ export default async function Home() {
   return (
     <>
       <main className={styles.home_main}>
-        <div>
+        {/* <div>
           <h1>Hi! Welcome.</h1>
         </div>
         <div>
@@ -14,7 +15,8 @@ export default async function Home() {
         </div>
         <div>
           <Link href="/contact">Contact</Link>
-        </div>
+        </div> */}
+        <HeroSection />
       </main>
     </>
   );

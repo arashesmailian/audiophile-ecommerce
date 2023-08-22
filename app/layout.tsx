@@ -4,8 +4,6 @@ import Footer from '@/components/Footer';
 import './global.scss';
 
 export default function RootLayout({ children }: { children: any }) {
-  console.log(children?.props?.childProp.segment);
-
   return (
     <html lang="en" className={manrope.className}>
       <head />
