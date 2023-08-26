@@ -1,9 +1,9 @@
 import { IProduct } from '@/types/mainData'
-import data from '../../data.json'
+import { allProducts } from './allProducts'
 
 export const getCategories = ()=>{
     const categories:string[] = []
-     data.map((product:IProduct)=>{
+     allProducts.map((product:IProduct)=>{
         if(!categories.includes(product.category.toUpperCase()))
             categories.push(product.category.toUpperCase())
     })

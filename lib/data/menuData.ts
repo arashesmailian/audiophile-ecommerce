@@ -23,7 +23,7 @@ export const menuData = {
       },
       {
         title: "headphones",
-        link: "/headphones",
+        link: "/category/headphones",
         active: false,
         cta: "shop",
         image: {
@@ -33,7 +33,7 @@ export const menuData = {
       },
       {
         title: "speakers",
-        link: "/speakers",
+        link: "/category/speakers",
         active: false,
         cta: "shop",
         image: {
@@ -43,7 +43,7 @@ export const menuData = {
       },
       {
         title: "earphones",
-        link: "/earphones",
+        link: "/category/earphones",
         active: false,
         cta: "shop",
         image: {

@@ -27,7 +27,7 @@ export const getRootLayoutData = ()=>{
             },
             {
                 title:'HEADPHONES',
-                link:'/headphones',
+                link:'/category/headphones',
                 image:{
                     src:headphones,
                     alt:'headphones',
@@ -35,7 +35,7 @@ export const getRootLayoutData = ()=>{
             },
             {
                 title:'EARPHONES',
-                link:'/earphones',
+                link:'/category/earphones',
                 image:{
                     src:earphones,
                     alt:'earphones',
@@ -43,7 +43,7 @@ export const getRootLayoutData = ()=>{
             },
             {
                 title:'SPEAKERS',
-                link:'/speakers',
+                link:'/category/speakers',
                 image:{
                     src:speakers,
                     alt:'speakers'

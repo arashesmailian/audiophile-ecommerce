@@ -1,0 +1,12 @@
+.container{
+    max-width: 100%;
+    padding: 0rem 1rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      padding: 5rem 2rem;
+    }
+}
+.wrapper{
+    max-width: $max-container;
+    margin: $center-container;
+}

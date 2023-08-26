@@ -1,0 +1,132 @@
+.container{
+    max-width: 100%;
+    padding: 2rem 0rem;
+  
+    @media screen and (min-width:$tablet) {
+      min-height: 45rem;
+      display: flex;
+  
+      & > * {
+        flex: 1;
+      }
+    }
+}
+.wrapper{
+    min-height: 10rem;
+    max-width: $max-container;
+    margin: $center-container;
+    display: flex;
+    flex-direction: column;
+  
+    @media screen and (min-width:$tablet) {
+      flex-direction: row;
+      min-height: 35rem;
+  
+      & > * {
+        flex: 1;
+        }
+    }
+}
+.wrapper_flip{
+    @media screen and (min-width:$tablet) {
+        flex-direction: row-reverse;
+    }
+}
+.image_wrapper{
+    position: relative;
+    min-height: 22rem;
+}
+.image{
+    border-radius: 10rem;
+
+    img {
+      object-fit: contain;
+  
+      & > * {
+        border-radius: $border-radius;
+      }
+    }
+}
+.desktop_img{
+    display: none;
+    @media screen and (min-width:992px) {
+        display: block;
+    }
+}
+.tablet_img{
+    display: none;
+    @media screen and (max-width:991px) and (min-width:575px) {
+        display: block;
+    }
+}
+.mobile_img{
+    display: none;
+    @media screen and (max-width:576px) {
+        display: block;
+    }
+}
+.content_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+  
+    @media screen and (min-width:$tablet) {
+      justify-content: flex-start;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  
+    @media screen and (min-width:$tablet) {
+      align-items: flex-start;
+      text-align: left;
+      transform: translateX(2rem);
+      padding: 0rem;
+    }
+  
+    @media screen and (min-width:$desktop) {
+      transform: translateX(6rem);
+    }
+}
+.content_flip{
+    @media screen and (min-width:$tablet) {
+        transform: translateX(0rem) !important;
+    }
+    @media screen and (min-width:$desktop) {
+        transform: translateX(0rem) !important;
+    }
+}
+.subheading{
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.625rem;
+    color: $color-pry-100;
+    font-weight: $font-weight-300;
+}
+.heading{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    line-height: 1.95rem;
+    max-width: 15rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      max-width: 20rem;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+}
+.description{
+    margin: 1.5rem 0rem 2rem 0rem;
+    max-width: 35rem;
+  
+    @media screen and (min-width:$tablet) {
+      max-width: 28rem;
+    }
+}

@@ -1,0 +1,28 @@
+.container{
+    max-width: 100%;
+    min-height: 6.4375rem;
+    background-color: $color-sec-300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    @media screen and (min-width:$mobile) {
+      min-height: 15.375rem;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      min-height: 14.9375rem;
+    }
+}
+.heading{
+    color: $color-sec-200;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+  
+    @media screen and (min-width:$mobile) {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+}
