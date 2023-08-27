@@ -1,0 +1,126 @@
+.container{
+    max-width: 100%;
+    padding: 0rem 1rem;
+    margin: 2rem 0rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      padding: 0rem 2rem;
+      margin: 3.75rem 0rem 2rem 0rem;
+    }
+}
+.wrapper{
+    min-height: 0rem;
+    max-width: $max-container;
+    margin: $center-container;
+    display: flex;
+    flex-direction: column;
+  
+    @media screen and (min-width:$tablet-mini) {
+      min-height: 35rem;
+      flex-direction: row;
+    }
+  
+    & > * {
+      flex: 1;
+    }
+}
+.image_wrapper{
+    background-color: $color-sec-500;
+    position: relative;
+    min-height: 21.5rem;
+    border-radius: $border-radius;
+  
+    @media screen and (min-width:$tablet-mini) {
+      background-color: transparent;
+    }
+}
+.image{
+    border-radius: $border-radius;
+    img {
+      object-fit: contain;
+      border-radius: $border-radius;
+    } 
+}
+.desktop_img{
+  display: none;
+  @media screen and (min-width:992px) {
+      display: block;
+  }
+}
+.tablet_img{
+  display: none;
+  @media screen and (max-width:991px) and (min-width:786px) {
+      display: block;
+  }
+}
+.mobile_img{
+  display: none;
+  @media screen and (max-width:785px) {
+      display: block;
+  }
+}
+.content_wrapper{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    min-height: 0rem;
+  
+    @media screen and (min-width:$tablet) {
+      justify-content: flex-start;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0rem;
+  
+    @media screen and (min-width:$tablet) {
+      align-items: flex-start;
+      transform: translateX(2rem);
+      padding: 0rem;
+    }
+  
+    @media screen and (min-width:$desktop) {
+      transform: translateX(6rem);
+    }
+}
+.subheading{
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.625rem;
+    color: $color-pry-100;
+    font-weight: $font-weight-300;
+}
+.heading{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    line-height: 1.95rem;
+    max-width: 15rem;
+  
+    @media screen and (min-width:$tablet-mini){
+      max-width: 20rem;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+}
+.description{
+    margin: 1.5rem 0rem 2rem 0rem;
+
+    @media screen and (min-width:$tablet) {
+      max-width: 28rem;
+    }
+}
+.price{
+    color: $color-sec-300;
+    font-size: 1.125rem;
+    letter-spacing: 0.080625rem;
+}
+.order_wrapper{
+    min-height: 0rem;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}

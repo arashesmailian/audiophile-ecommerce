@@ -1,0 +1,84 @@
+.container{
+    max-width: 100%;
+    padding: 0rem 1rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      padding: 0rem 2rem;
+      margin: 4rem 0rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      margin: 6rem 0rem;
+    }
+}
+.wrapper{
+    background-color: white;
+    max-width: $max-container;
+    margin: $center-container;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  
+    @media screen and (min-width:$tablet) {
+      flex-direction: row;
+    }
+  
+    & > * {
+      flex: 1;
+    }
+}
+.content_wrapperP{
+    padding: 2rem 0rem 5rem 0rem;
+
+    @media screen and (min-width:$tablet) {
+      padding: 0rem;
+    }
+}
+.content_header{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.05375rem;
+    margin-bottom: 1rem;
+  
+    @media screen and (min-width:$tablet-mini) {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+  
+    @media screen and (min-width:$tablet) {
+      margin-bottom: 2rem;
+    }
+}
+.content_text{
+    white-space: pre-line;
+}
+.list_wrapper{
+    @media screen and (min-width:$tablet-mini) {
+        display: flex;
+    
+        @media screen and (min-width:$tablet) {
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        & > * {
+          flex: 1;
+    
+          @media screen and (min-width:$tablet) {
+            flex: initial;
+          }
+        }
+      }
+}
+.list_item{
+    display: flex;
+}
+.quantity{
+    color: $color-pry-100;
+    font-weight: $font-weight-400;
+}
+.quantity_text{
+    margin-left: 1.4375rem;
+    margin-bottom: 0.3rem;
+}
