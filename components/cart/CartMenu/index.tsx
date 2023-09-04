@@ -14,7 +14,7 @@ const CartMenu = () => {
   const total = useAppSelector(totalCartPrice);
 
   const handleClearCart = () => {
-    dispatch(clearCart);
+    dispatch(clearCart(true));
   };
 
   const handleCartModalClose = () => {

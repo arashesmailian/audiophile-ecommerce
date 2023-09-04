@@ -19,7 +19,7 @@ type Props = {
 const ProductCounter = ({ custom, data, preventDelete }: Props) => {
   const dispatch = useDispatch();
   const cartItems = useAppSelector((state) => state.cart.cartItems);
-  const singleCartItem = cartItems.find((item) => item.id === data.id);
+  const singleCartItem = cartItems?.find((item) => item.id === data.id);
 
   const handleDecrease = () => {
     if (preventDelete) {
@@ -50,7 +50,7 @@ const ProductCounter = ({ custom, data, preventDelete }: Props) => {
           <button
             className={styles.button}
             onClick={handleDecrease}
-            // disabled={singleCartItem?.cartQuantity === 1}
+            disabled={!singleCartItem}
           >
             <FontAwesomeIcon icon={faMinus} />
           </button>
