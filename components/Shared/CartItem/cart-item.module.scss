@@ -1,0 +1,58 @@
+.wrapper{
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > * {
+    flex: 1;
+  }
+}
+.image{
+  position: relative;
+  object-fit: contain;
+  height: 4rem;
+  max-width: 4rem;
+  border-radius: $border-radius;
+
+  img {
+    object-fit: contain;
+    border-radius: $border-radius;
+  }
+}
+.details{
+    padding-left: 1rem;
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 0.8375rem;
+    line-height: 1.5625rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5625rem;
+    font-weight: $font-weight-400;
+    color: $color-sec-700;
+  }
+}
+.counter{
+  display: flex;
+  justify-content: flex-end;
+}
+.summary{
+    display: none;
+}
+.number{
+  display: flex;
+  justify-content: flex-end;
+
+  p {
+    font-weight: $font-weight-400;
+    color: $color-sec-700;
+  }
+}
+.editable{
+    display: none;
+}

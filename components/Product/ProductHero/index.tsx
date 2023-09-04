@@ -2,6 +2,7 @@ import { IProduct } from '@/types/mainData';
 import styles from './product-hero.module.scss';
 import Image from 'next/image';
 import { CURRENCY_SYMBOL, PRODUCT_TYPE } from '@/constants/consts';
+import ProductCounter from '@/components/Shared/ProductCounter';
 
 type Props = {
   productData: IProduct;
@@ -47,7 +48,9 @@ const ProductHero = ({ productData }: Props) => {
               {CURRENCY_SYMBOL} {productData.price.toLocaleString('en-US')}
             </h3>
             <div className={styles.order_wrapper}>
-              <div>{/* {ProductCounter} */}</div>
+              <div>
+                <ProductCounter data={productData} preventDelete />
+              </div>
             </div>
           </div>
         </div>

@@ -1,28 +1,39 @@
+'use client';
+
 import Image from 'next/image';
 
+import CartMenu from '@/components/cart/CartMenu';
+import { setCartModalStatus } from '@/redux/reducers/cartModalSlice';
+import { useAppDispatch, useAppSelector } from '@/redux/types';
+import { totalCartQuantity } from '@/redux/reducers/cartSlice';
 import styles from './index.module.scss';
-import Link from 'next/link';
 
 type Props = {
   data: { icon: any; alt: string };
 };
 
 const CartIcon = ({ data: { icon, alt } }: Props) => {
-  let totalProduct = 1;
+  const dispatch = useAppDispatch();
+  const cartModalStatus = useAppSelector((state) => state.cartModal.value);
+  const cartItems = useAppSelector((state) => state.cart.cartItems);
+  const totalCount = useAppSelector(totalCartQuantity);
+  const handleOpenCartModal = () => {
+    dispatch(setCartModalStatus(true));
+  };
 
   return (
     <div className={styles.cart_wrapper}>
-      <button className={styles.cart_button}>
-        <Link href="checkout">
-          <Image src={icon} alt={alt} />
-        </Link>
-        {totalProduct && (
+      <button className={styles.cart_button} onClick={handleOpenCartModal}>
+        {/* <Link href="/checkout"> */}
+        <Image src={icon} alt={alt} />
+        {/* </Link> */}
+        {totalCount && (
           <div className={styles.cart_number}>
-            <p>{totalProduct}</p>
+            <p>{totalCount}</p>
           </div>
         )}
       </button>
-      {/* cart menu */}
+      {cartModalStatus && <CartMenu />}
     </div>
   );
 };
