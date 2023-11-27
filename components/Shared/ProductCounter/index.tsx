@@ -19,11 +19,14 @@ type Props = {
 const ProductCounter = ({ custom, data, preventDelete }: Props) => {
   const dispatch = useDispatch();
   const cartItems = useAppSelector((state) => state.cart.cartItems);
-  const singleCartItem = cartItems?.find((item) => item.id === data.id);
+  const singleCartItem = Array.isArray(cartItems)
+    ? cartItems.find((item) => item.id === data.id)
+    : undefined;
 
   const handleDecrease = () => {
     if (preventDelete) {
-      if (singleCartItem!.cartQuantity > 1) dispatch(decreaseQuantity(data));
+      if (singleCartItem && singleCartItem.cartQuantity > 1)
+        dispatch(decreaseQuantity(data));
     } else {
       dispatch(decreaseQuantity(data));
     }

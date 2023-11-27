@@ -51,7 +51,7 @@ const cartSlice = createSlice({
     }
 })
 export const totalCartQuantity = (state:RootState)=>{
-    const total = (state.cart.cartItems || []).reduce((acc:number,current:IProduct)=>acc+current.cartQuantity,0)
+    const total = (state.cart.cartItems || []).reduce((acc:number,current:IProduct)=>acc+(current.cartQuantity || 1),0)
     return total;
 }
 export const totalCartPrice = (state:RootState)=>{

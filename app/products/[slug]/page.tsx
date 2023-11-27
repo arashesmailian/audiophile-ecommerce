@@ -2,13 +2,13 @@ import NavigateToBack from '@/components/Checkout/Navigator';
 import { allProducts, ctaData, menuData } from '@/lib/data';
 import { IProduct } from '@/types/mainData';
 
-import styles from './product-page.module.scss';
 import ProductHero from '@/components/Product/ProductHero';
 import ProductFeatures from '@/components/Product/ProductFeatures';
 import ProductGallery from '@/components/Product/ProductGallery';
 import ProductRelated from '@/components/Product/ProductRelated';
 import MenuCards from '@/components/Shared/MenuCards';
 import CtaSection from '@/components/Shared/CtaSection';
+import styles from './product-page.module.scss';
 
 export const dynamicParams = false; //this will redirect to 404 page
 

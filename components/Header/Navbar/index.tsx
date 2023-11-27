@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getRootLayoutData } from 'lib/data';
 import MobileHamburgerMenu from '@/components/Header/MobileHamburgerMenu';
-import CartIcon from '@/components/Header/HeaderCartIconWrapper';
+// import CartIcon from '@/components/Header/HeaderCartIconWrapper';
 import { useState } from 'react';
 import HeaderMenuItems from '../HeaderMenuItems';
 
@@ -12,6 +12,15 @@ import styles from './index.module.scss';
 import { useAppDispatch, useAppSelector } from '@/redux/types';
 import Overlay from '@/components/Shared/Overlay';
 import { setCartModalStatus } from '@/redux/reducers/cartModalSlice';
+
+import dynamic from 'next/dynamic';
+
+const CartIcon = dynamic(
+  () => import('@/components/Header/HeaderCartIconWrapper'),
+  {
+    ssr: false,
+  },
+);
 
 const Navbar = () => {
   const dispatch = useAppDispatch();

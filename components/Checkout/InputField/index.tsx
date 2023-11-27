@@ -7,6 +7,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '@/helpers/yupschema';
 
 import styles from './index.module.scss';
+import { useAppDispatch, useAppSelector } from '@/redux/types';
+import { submitForm } from '@/redux/reducers/formSlice';
 
 type Props = {
   inputName:
@@ -19,7 +21,7 @@ type Props = {
     | 'country'
     | 'emoneyNumber'
     | 'emoneyPin';
-  error: FieldError | undefined;
+  error?: FieldError | undefined;
   errorMessage: string;
   type: HTMLInputTypeAttribute;
   id: string;
@@ -34,7 +36,15 @@ const InputField = ({
   id,
   placeholder,
 }: Props) => {
+  const formState = useAppSelector((state) => state.form);
+  // const dispatch = useAppDispatch();
   const { register } = useForm({ resolver: yupResolver(schema) });
+
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log({ ...formState, [e.target.id]: e.target.value });
+
+    // dispatch(submitForm({ ...formState, [e.target.id]: e.target.value }));
+  };
 
   return (
     <div className={styles.form_input}>
@@ -46,6 +56,8 @@ const InputField = ({
           id={id}
           placeholder={placeholder}
           {...register(inputName)}
+          onChange={handleOnChange}
+          // value={formState[inputName]}
         />
       </div>
     </div>

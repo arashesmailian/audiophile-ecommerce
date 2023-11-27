@@ -56,7 +56,7 @@ export const allProducts=[
       subTotal:0,
       cartIcon:yx1CartIcon,
       shortName:'YX1',
-      cartQuantity:3,
+      cartQuantity:0,
       slug: "yx1-earphones",
       name: "YX1 Wireless Earphones",
       image: {

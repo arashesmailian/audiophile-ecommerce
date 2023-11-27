@@ -33,7 +33,7 @@ const CheckoutSummary = () => {
               <div className={styles.empty_cart}>Your cart is empty!</div>
             )}
             {cartItems.length > 0 &&
-              cartItems?.map((cartItem) => {
+              cartItems.map((cartItem) => {
                 return <CartItem key={cartItem.id} data={cartItem} summary />;
               })}
           </div>

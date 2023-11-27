@@ -8,16 +8,34 @@ import InputField from '../InputField';
 import PaymentInput from '../PaymentInput';
 import CashMethodWrapper from '../CashMethodWrapper';
 import styles from './index.module.scss';
+import { submitForm } from '@/redux/reducers/formSlice';
+import { FormDataType } from '@/types/formData';
+import { useAppDispatch } from '@/redux/types';
 
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('emoney');
   const {
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  } = useForm();
+  // { resolver: yupResolver(schema), mode: 'onChange' }
+
+  // const dispatch = useAppDispatch();
+
+  const onSubmit = (e: any, data: any) => {
+    // e.preventDefault();
+    console.log(data);
+    console.log(e);
+
+    // dispatch(submitForm(data));
+  };
 
   return (
-    <form id="checkoutForm" className={styles.form}>
+    <form
+      id="checkoutForm"
+      className={styles.form}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <h2 className={styles.heading}>checkout</h2>
       <div>
         <h3 className={styles.section_heading}>billing details</h3>
@@ -25,7 +43,7 @@ const CheckoutForm = () => {
           <div className={styles.form_break}>
             <InputField
               inputName="name"
-              error={errors.name}
+              // error={errors.name}
               id="name"
               type="text"
               placeholder="Alexei Ward"
@@ -36,7 +54,7 @@ const CheckoutForm = () => {
             <InputField
               inputName="email"
               type="email"
-              error={errors.email}
+              // error={errors.email}
               id="email"
               placeholder="alexei@mail.com"
               errorMessage="Wrong email format!"
@@ -46,7 +64,7 @@ const CheckoutForm = () => {
             <InputField
               inputName="phone"
               type="text"
-              error={errors.phone}
+              // error={errors.phone}
               id="phone"
               placeholder="+1 202-555-0136"
               errorMessage="Wrong phone format!"
@@ -61,7 +79,7 @@ const CheckoutForm = () => {
             inputName="address"
             type="text"
             id="address"
-            error={errors.address}
+            // error={errors.address}
             placeholder="1137 Williams Avenue"
             errorMessage="Enter your address!"
           />
@@ -70,7 +88,7 @@ const CheckoutForm = () => {
               inputName="zipCode"
               type="text"
               id="zipCode"
-              error={errors.zipCode}
+              // error={errors.zipCode}
               errorMessage="Enter your Zip Code!"
               placeholder="10001"
             />
@@ -80,7 +98,7 @@ const CheckoutForm = () => {
               inputName="city"
               id="city"
               type="text"
-              error={errors.city}
+              // error={errors.city}
               errorMessage="Enter your city!"
               placeholder="new york"
             />
@@ -90,7 +108,7 @@ const CheckoutForm = () => {
               inputName="country"
               id="country"
               type="text"
-              error={errors.country}
+              // error={errors.country}
               errorMessage="Enter your country!"
               placeholder="united states"
             />
@@ -128,7 +146,7 @@ const CheckoutForm = () => {
                   id="emoneyNumber"
                   type="text"
                   inputName="emoneyNumber"
-                  error={errors.emoneyNumber}
+                  // error={errors.emoneyNumber}
                   errorMessage="Enter your e-Money Number!"
                   placeholder="238521993"
                 />
@@ -138,7 +156,7 @@ const CheckoutForm = () => {
                   id="emoneyPin"
                   type="text"
                   inputName="emoneyPin"
-                  error={errors.emoneyPin}
+                  // error={errors.emoneyPin}
                   errorMessage="Enter your e-Money Pin!"
                   placeholder="6891"
                 />
@@ -151,6 +169,7 @@ const CheckoutForm = () => {
           <CashMethodWrapper />
         )} */}
       </div>
+      <button type="submit">submit</button>
     </form>
   );
 };

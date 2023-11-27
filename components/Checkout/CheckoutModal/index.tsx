@@ -21,6 +21,7 @@ const CheckoutModal = () => {
   const grand = grandTotal(total, shipping, vat);
 
   const handleClearCart = () => {
+    
     dispatch(clearCart(true));
     dispatch(setModalStatus(false));
   };

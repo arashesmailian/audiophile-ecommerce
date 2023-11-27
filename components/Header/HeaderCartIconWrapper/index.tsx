@@ -24,14 +24,8 @@ const CartIcon = ({ data: { icon, alt } }: Props) => {
   return (
     <div className={styles.cart_wrapper}>
       <button className={styles.cart_button} onClick={handleOpenCartModal}>
-        {/* <Link href="/checkout"> */}
         <Image src={icon} alt={alt} />
-        {/* </Link> */}
-        {totalCount && (
-          <div className={styles.cart_number}>
-            <p>{totalCount}</p>
-          </div>
-        )}
+        <p className={styles.cart_number}>{totalCount || 0}</p>
       </button>
       {cartModalStatus && <CartMenu />}
     </div>

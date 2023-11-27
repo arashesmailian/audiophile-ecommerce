@@ -1,3 +1,4 @@
+'use client';
 import { IProduct } from '@/types/mainData';
 
 import styles from './cart-item.module.scss';
@@ -6,7 +7,6 @@ import Image from 'next/image';
 import { CURRENCY_SYMBOL } from '@/constants/consts';
 import ProductCounter from '../ProductCounter';
 
-
 type Props = {
   summary?: boolean;
   editable?: boolean;
@@ -14,11 +14,12 @@ type Props = {
 };
 
 const CartItem = ({ summary, editable, data }: Props) => {
+  if (!data) return <h2>Loading ... </h2>;
   return (
     <div className={styles.wrapper}>
       <Link href="/headphones">
         <div className={styles.image}>
-          <Image src={data.cartIcon} alt={data.name} fill priority />
+          <Image src={data.cartIcon} alt={data.name} priority />
         </div>
       </Link>
       <div className={styles.details}>
